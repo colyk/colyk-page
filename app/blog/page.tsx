@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 export default async function BlogPage() {
   return (
     <section>
-      blog
+      Blog
     </section>
   );
 }
