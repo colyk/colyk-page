@@ -2,7 +2,7 @@
 export default async function HomePage() {
   return (
     <section>
-      Home
+      I would like to test my CI
     </section>
   );
 }
