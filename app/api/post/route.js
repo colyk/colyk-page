@@ -9,11 +9,6 @@ export async function GET() {
     keyFilename: process.env.GCP_CREDENTIALS_PATH
   });
 
-  try {
-    const [files] = await storage.bucket(process.env.GCP_STORAGE_NAME).getFiles();
-    return NextResponse.json({ data: files.map(f => f.name) })
-  }
-  catch {
-    return NextResponse.json({ data: 'errror' })
-  }
+  const [files] = await storage.bucket(process.env.GCP_STORAGE_NAME).getFiles();
+  return NextResponse.json({ data: files.map(f => f.name) })
 }
