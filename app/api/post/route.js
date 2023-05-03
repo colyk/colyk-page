@@ -14,6 +14,20 @@ export async function GET() {
   console.log(process.env.GCP_STORAGE_NAME)
 
   try {
+    // Makes an authenticated API request.
+    const results = await storage.getBuckets();
+  
+    const [buckets] = results;
+  
+    console.log('Buckets:');
+    buckets.forEach(bucket => {
+     console.log(bucket.name);
+    });
+   } catch (err) {
+    console.error('ERROR:', err);
+   }
+   
+  try {
     const [files] = await storage.bucket(process.env.GCP_STORAGE_NAME).getFiles();
     return NextResponse.json({ data: files.map(f => f.name) })
 
