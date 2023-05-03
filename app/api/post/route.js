@@ -14,6 +14,6 @@ export async function GET() {
     return NextResponse.json({ data: files.map(f => f.name) })
   }
   catch {
-    return NextResponse.json({ data })
+    return NextResponse.json({ data: 'errror' })
   }
 }
