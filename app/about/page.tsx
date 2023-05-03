@@ -8,7 +8,12 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <section>
-      About
+      <h1>About</h1>
+      <a
+        href="/files/resume.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+      >My resume</a>
     </section>
   );
 }
