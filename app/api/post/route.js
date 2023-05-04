@@ -3,7 +3,7 @@ const { Storage } = require('@google-cloud/storage');
 
 
 
-export async function GET() {
+export async function POST() {
   const storage = new Storage({
     projectId: process.env.GCP_PROJECT,
     keyFilename: process.env.GCP_CREDENTIALS_PATH
