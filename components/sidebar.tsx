@@ -39,16 +39,15 @@ export default function Navbar() {
                 key={path}
                 href={path}
                 className={clsx(
-                  'transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle',
+                  'transition-all hover:text-neutral-800 flex align-middle',
                   {
                     'text-neutral-500': !isActive,
                     'font-bold': isActive,
                   }
                 )}
               >
-                <span className="relative py-[5px] px-[10px]">
+                <span className="relative py-[5px] px-[10px] capitalize">
                   {name}
-
                 </span>
               </Link>
             );
